@@ -1,2 +1,2 @@
 
-<a href="https://github.com/bahoss/fly-search"> Демо</a>
+<a href="https://bahoss.github.io/fly-search/"> Демо</a>
