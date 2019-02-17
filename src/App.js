@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import HeaderCurr from "./Components/header&currency";
-import DepartArrival from "./Components/depart&arrival";
+import HeaderCurr from "./Components/Header";
+import DepartArrival from "./Components/Airports";
 import "./App.styled.scss";
 
 class App extends Component {
