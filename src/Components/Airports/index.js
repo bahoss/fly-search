@@ -28,6 +28,8 @@ class DepartArrival extends Component {
   };
 
   render() {
+    const { departAirports, arrivalAirports } = this.props.airports;
+    const { deleteAirport } = this.props;
     return (
       <Segment attached>
         <Segment.Group horizontal>
@@ -40,13 +42,14 @@ class DepartArrival extends Component {
               value={this.state.departAirports}
             />
             <Button
+              color="teal"
               name="departAirports"
               onClick={this.addAirports}
               icon="plus"
             />
             <Airports
-              airports={this.props.airports.departAirports}
-              delAirport={this.props.deleteAirport}
+              airports={departAirports}
+              delAirport={deleteAirport}
               type="departAirports"
             />
           </Segment>
@@ -59,13 +62,14 @@ class DepartArrival extends Component {
               name="arrivalAirports"
             />
             <Button
+              color="teal"
               name="arrivalAirports"
               onClick={this.addAirports}
               icon="plus"
             />
             <Airports
-              airports={this.props.airports.arrivalAirports}
-              delAirport={this.props.deleteAirport}
+              airports={arrivalAirports}
+              delAirport={deleteAirport}
               type="arrivalAirports"
             />
           </Segment>

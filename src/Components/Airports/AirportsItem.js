@@ -14,6 +14,7 @@ class Airports extends Component {
               <Segment key={`${index}`}>
                 <label>{item}</label>
                 <Button
+                  color="red"
                   icon="window close"
                   value={index}
                   onClick={this.delAirport}
