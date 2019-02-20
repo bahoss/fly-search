@@ -8,21 +8,20 @@ class Airports extends Component {
   render() {
     return (
       <>
-        {this.props.airports.length !== 0 &&
-          this.props.airports.map((item, index) => {
-            return (
-              <Segment key={`${index}`}>
-                <label>{item}</label>
-                <Button
-                  color="red"
-                  icon="window close"
-                  value={index}
-                  onClick={this.delAirport}
-                  floated="right"
-                />
-              </Segment>
-            );
-          })}
+        {this.props.airports.map((item, index) => {
+          return (
+            <Segment key={`${index}`}>
+              <label>{item}</label>
+              <Button
+                color="red"
+                icon="window close"
+                value={index}
+                onClick={this.delAirport}
+                floated="right"
+              />
+            </Segment>
+          );
+        })}
       </>
     );
   }

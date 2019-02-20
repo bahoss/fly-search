@@ -20,21 +20,23 @@ class App extends Component {
   };
 
   addAirport = (type, airport) => {
-    const join = () => {
-      return this.state.airports[type].push(airport);
-    };
-    this.setState(join);
+    this.setState(prevState => ({
+      airports: {
+        ...prevState.airports,
+        [type]: prevState.airports[type].concat(airport)
+      }
+    }));
   };
 
   deleteAirport = (type, index) => {
-    const del = () => {
-      const airports = { ...this.state.airports };
-      const narray = airports[type];
-      narray.splice(index, 1);
-      return airports;
-    };
-
-    this.setState({ airports: del() });
+    this.setState(prevState => ({
+      airports: {
+        ...prevState.airports,
+        [type]: this.state.airports[type].filter(
+          (airport, idx) => idx !== index
+        )
+      }
+    }));
   };
 
   render() {

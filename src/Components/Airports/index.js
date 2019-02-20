@@ -47,11 +47,15 @@ class DepartArrival extends Component {
               onClick={this.addAirports}
               icon="plus"
             />
-            <Airports
-              airports={departAirports}
-              delAirport={deleteAirport}
-              type="departAirports"
-            />
+            {departAirports.length > 0 ? (
+              <Airports
+                airports={departAirports}
+                delAirport={deleteAirport}
+                type="departAirports"
+              />
+            ) : (
+              ""
+            )}
           </Segment>
           <Segment>
             <label>Прилет</label>
@@ -67,11 +71,15 @@ class DepartArrival extends Component {
               onClick={this.addAirports}
               icon="plus"
             />
-            <Airports
-              airports={arrivalAirports}
-              delAirport={deleteAirport}
-              type="arrivalAirports"
-            />
+            {arrivalAirports.length > 0 ? (
+              <Airports
+                airports={arrivalAirports}
+                delAirport={deleteAirport}
+                type="arrivalAirports"
+              />
+            ) : (
+              ""
+            )}
           </Segment>
         </Segment.Group>
       </Segment>
