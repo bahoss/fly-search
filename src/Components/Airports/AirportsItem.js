@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Segment, Button } from "semantic-ui-react";
+import { Segment, Label, Icon } from "semantic-ui-react";
+import "./airport.scss";
 
 class Airports extends Component {
   delAirport = (e, { value }) => {
@@ -7,22 +8,18 @@ class Airports extends Component {
   };
   render() {
     return (
-      <>
-        {this.props.airports.map((item, index) => {
-          return (
-            <Segment key={`${index}`}>
-              <label>{item}</label>
-              <Button
-                color="red"
-                icon="window close"
-                value={index}
-                onClick={this.delAirport}
-                floated="right"
-              />
-            </Segment>
-          );
-        })}
-      </>
+      <div className="list-wrapper">
+        <div>
+          {this.props.airports.map((item, index) => {
+            return (
+              <Label key={`${index}`}>
+                {item}
+                <Icon name="delete" value={index} onClick={this.delAirport} />
+              </Label>
+            );
+          })}
+        </div>
+      </div>
     );
   }
 }

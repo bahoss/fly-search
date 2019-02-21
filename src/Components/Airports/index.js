@@ -13,17 +13,15 @@ class DepartArrival extends Component {
   }
 
   getAirports = (e, { name, value }) => {
-    const add = () => {
-      const copystate = { ...this.state };
-      copystate[name] = value;
-      return copystate;
-    };
-    this.setState(add);
+    this.setState(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
   };
 
   addAirports = (e, { name }) => {
     this.state[name].length !== 0 &&
-      this.props.addAirport(name, this.state[name]);
+      this.props.addAirport(name, this.state[name].split(" "));
     this.setState({ departAirports: "", arrivalAirports: "" });
   };
 

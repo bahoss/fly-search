@@ -4,3 +4,12 @@ label {
   padding: 8px;
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
+
+.list-wrapper {
+  display: flex;
+
+  padding-top: 10px;
+  div {
+    flex-shrink: 0;
+  }
+}
