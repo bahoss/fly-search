@@ -1,8 +1,11 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
   width: 60vw;
   height: 50vh;
-  margin: auto;
-  .currency {
-    width: 7px;
-  }
+  margin: 10px auto;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 1px 0px 6px 1px #6d6666;
+  -moz-box-shadow: 1px 0px 6px 1px #6d6666;
+  box-shadow: 1px 0px 6px 1px #6d6666;
 }

@@ -8,17 +8,15 @@ class Airports extends Component {
   };
   render() {
     return (
-      <div className="list-wrapper">
-        <div>
-          {this.props.airports.map((item, index) => {
-            return (
-              <Label key={`${index}`}>
-                {item}
-                <Icon name="delete" value={index} onClick={this.delAirport} />
-              </Label>
-            );
-          })}
-        </div>
+      <div className="airportsitem">
+        {this.props.airports.map((item, index) => {
+          return (
+            <Label key={`${index}`}>
+              {item}
+              <Icon name="delete" value={index} onClick={this.delAirport} />
+            </Label>
+          );
+        })}
       </div>
     );
   }

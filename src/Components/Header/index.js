@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Header, Icon, Segment, Dropdown } from "semantic-ui-react";
+import { Icon, Dropdown } from "semantic-ui-react";
+import "./header.styled.scss";
 
 const currency = [
   { text: "RUR", value: "RUR" },
@@ -10,22 +11,24 @@ const currency = [
 class HeaderCurr extends Component {
   render() {
     return (
-      <>
-        <Header as="h2" attached="top">
-          <Icon name="search" />
-          <Header.Content>Поиск</Header.Content>
-        </Header>
-        <Segment attached>
+      <header>
+        <div>
+          <Icon name="search" size="big" />
+          <span>
+            <h1>Поиск</h1>
+          </span>
+        </div>
+        <div className="currency">
           <Dropdown
-            placeholder="Валюта"
             compact
+            placeholder="Валюта"
             options={currency}
             onChange={this.props.changeCurrency}
             selection
             value={this.props.value}
           />
-        </Segment>
-      </>
+        </div>
+      </header>
     );
   }
 }

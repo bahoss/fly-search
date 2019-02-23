@@ -1,15 +1,25 @@
+.airports {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border: 1px solid #cdddf7;
+  .searchbar {
+    width: 50%;
+    flex-grow: 1;
+    justify-content: center;
+    border-left: 1px solid #cdddf7;
+  }
+}
+
+.airportsitem {
+  padding: 10px;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
 label {
   display: inline-block;
   margin: 0 20px;
   padding: 8px;
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
-}
-
-.list-wrapper {
-  display: flex;
-
-  padding-top: 10px;
-  div {
-    flex-shrink: 0;
-  }
 }
